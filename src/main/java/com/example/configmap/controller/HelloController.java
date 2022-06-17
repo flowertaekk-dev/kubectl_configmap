@@ -15,6 +15,7 @@ public class HelloController {
 
     @GetMapping
     public Mono<String> hello() {
+        System.out.println("ok");
         return Mono.just(myConfig.getSomeId() + ", " + myConfig.getSomePw());
     }
 }
